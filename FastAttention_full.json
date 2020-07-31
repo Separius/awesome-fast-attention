@@ -47,6 +47,13 @@
     "causal": false
   },
   {
+    "name": "SCRAM",
+    "arxiv_id": "1905.10308",
+    "comment": "uses PatchMatch to find close keys",
+    "complexity": "{N}*\\log({N})*{D}",
+    "causal": true
+  },
+  {
     "name": "Permutohedral Attention",
     "arxiv_id": "1907.00641",
     "code": "https://github.com/SamuelJoutard/Permutohedral_attention_module",
@@ -103,11 +110,27 @@
     "causal": true
   },
   {
+    "name": "Reformer",
+    "arxiv_id": "2001.04451",
+    "code": "https://github.com/google/trax/tree/master/trax/models/reformer",
+    "comment": "uses LSH to find close keys",
+    "complexity": "{N}*\\log({N})*{D}^2",
+    "causal": true
+  },
+  {
     "name": "Transformer on a Diet",
     "arxiv_id": "2002.06170",
     "code": "https://github.com/cgraywang/transformer-on-diet",
     "comment": "dilated transformer like wavenet",
     "complexity": "{N}*{k}*{D}",
+    "causal": true
+  },
+  {
+    "name": "Sinkhorn Attention",
+    "arxiv_id": "2002.11296",
+    "code": "https://github.com/lucidrains/sinkhorn-transformer",
+    "comment": "uses a cost matrix to assign limit attention between buckets",
+    "complexity": "\\frac{{N}^2}{n_b}+{n_b}^2",
     "causal": true
   },
   {
@@ -185,7 +208,7 @@
     "arxiv_id": "2006.04768",
     "code": "https://github.com/lucidrains/linformer",
     "comment": "project key and value from n*d to k*d",
-    "complexity": "{N}*{k}*{d}",
+    "complexity": "{N}*{k}*{D}",
     "causal": false
   },
   {

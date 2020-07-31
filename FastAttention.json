@@ -1,29 +1,5 @@
 [
     {
-        "paper_title": "Processing Megapixel Images with Deep Attention-Sampling Models",
-        "arxiv_id": "1905.03711",
-        "link": "https://github.com/idiap/attention-sampling"
-    },
-    {
-        "paper_title": "Reformer: The Efficient Transformer",
-        "arxiv_id": "2001.04451",
-        "link": "https://github.com/google/trax/tree/master/trax/models/reformer (Ld^2log(L))"
-    },
-    {
-        "paper_title": "SANet:Superpixel Attention Network for Skin Lesion Attributes Detection",
-        "arxiv_id": "1910.08995",
-        "link": "https://github.com/bermanmaxim/superpixPool"
-    },
-    {
-        "paper_title": "SCRAM: Spatially Coherent Randomized Attention Maps",
-        "arxiv_id": "1905.10308"
-    },
-    {
-        "paper_title": "Sparse Sinkhorn Attention",
-        "arxiv_id": "2002.11296",
-        "link": "https://github.com/lucidrains/sinkhorn-transformer"
-    },
-    {
         "paper_title": "Synthesizer: Rethinking Self-Attention in Transformer Models",
         "arxiv_id": "2005.00743"
     },
