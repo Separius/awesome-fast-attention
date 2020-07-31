@@ -91,9 +91,13 @@ def get_custom_emoji(custom):
     return ':wavy_dash:'
 
 
+def make_expandable(comment):
+    return f'<details><summary>expand</summary><p>{comment}</p></details>'
+
+
 def generate_fast_attention_table():
     header = [
-        '|paper(citation_count)|code(github_stars)|complexity(Big_O)|autoregressive?|custom_mask?|main_idea|',
+        '|Paper(citations)|Code|Complexity|autoregressive?|custom_mask?|main_idea|',
         '|:---:|:---:|:---:|:---:|:---:|:---:|']
     generated_lines = []
     meta_info = get_and_sort_meta_info('FastAttention_full.json')
@@ -105,8 +109,8 @@ def generate_fast_attention_table():
             code = '-'
         generated_lines.append(
             AttrDict(date=date, name=item['name'], paper=paper, auto=':heavy_check_mark:' if item['causal'] else ':x:',
-                     code=code, idea=item['comment'], complexity=item['complexity'].replace('*', '\\*'),
-                     citation=citation, custom=get_custom_emoji(item['custom'])))
+                     idea=make_expandable(item['comment']), complexity=item['complexity'].replace('*', '\\*'),
+                     citation=citation, custom=get_custom_emoji(item['custom']), code=code))
     generated_lines = sorted(generated_lines, key=attrgetter('date', 'citation'))
     generated_lines = ['|{paper}({citation})|{code}|O({complexity})|{auto}|{custom}|{idea}|'.format(**x)
                        for x in generated_lines]
