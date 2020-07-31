@@ -88,7 +88,6 @@ def make_expandable(comment):
 
 
 def render_complexity(complexity_latex):
-    # return complexity_latex.replace('*', '\\*')
     complexity = complexity_latex.replace('*', '\\cdot')
     return '![formula](https://render.githubusercontent.com/render/math?math=\\mathcal{O}(' + f'{complexity}))'
 
@@ -99,7 +98,7 @@ def generate_fast_attention_table():
         '|:---:|:---:|:---:|:---:|:---:|']
     generated_lines = []
     meta_info = get_and_sort_meta_info('FastAttention_full.json')
-    for item in tqdm(meta_info[:2]):
+    for item in tqdm(meta_info[:4]):
         citation, date, paper, abstract = fetch_common_parts(item)
         if 'code' in item:
             code = fancy_code(item['code'])
@@ -110,7 +109,7 @@ def generate_fast_attention_table():
                      idea=make_expandable(item['comment']), complexity=render_complexity(item['complexity']),
                      citation=citation, code=code))
     generated_lines = sorted(generated_lines, key=attrgetter('date', 'citation'))
-    generated_lines = ['|{paper} ({citation})|{code}|O({complexity})|{auto}|{idea}|'.format(**x)
+    generated_lines = ['|{paper} ({citation})|{code}|{complexity}|{auto}|{idea}|'.format(**x)
                        for x in generated_lines]
     return '\n'.join(header + generated_lines)
 

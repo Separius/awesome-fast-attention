@@ -18,7 +18,7 @@
     "name": "Efficient Attention",
     "arxiv_id": "1812.01243",
     "code": "https://github.com/cmsflash/efficient-attention",
-    "comment": "softmax(q)(softmax(k)v)",
+    "comment": "Softmax({Q})*(Softmax({K}^{T})*V)",
     "complexity": "N*D^2",
     "causal": false
   },
@@ -27,7 +27,7 @@
     "arxiv_id": "1904.10509",
     "code": "https://github.com/ptillet/torch-blocksparse",
     "comment": "sparse block based attention",
-    "complexity": "N*sqrt(N)*D",
+    "complexity": "{N}*\\sqrt{N}*{D}",
     "causal": true
   },
   {
