@@ -23,6 +23,14 @@
     "causal": false
   },
   {
+    "name": "StartTransformer",
+    "arxiv_id": "1902.09113",
+    "code": "https://github.com/fastnlp/fastNLP/blob/master/fastNLP/modules/encoder/star_transformer.py",
+    "comment": "uses a relay(global) node and attends to/from that node",
+    "complexity": "{N}*{D}",
+    "causal": false
+  },
+  {
     "name": "Sparse Transformer",
     "arxiv_id": "1904.10509",
     "code": "https://github.com/ptillet/torch-blocksparse",
@@ -37,6 +45,22 @@
     "comment": "squeeze and excitation with an attention pooling (instead of a GAP)",
     "complexity": "{N}*{D}^2",
     "causal": false
+  },
+  {
+    "name": "Permutohedral Attention",
+    "arxiv_id": "1907.00641",
+    "code": "https://github.com/SamuelJoutard/Permutohedral_attention_module",
+    "comment": "uses permutohedral lattice approximation algorithm to approximate the attention output",
+    "complexity": "{N}*{D}^2",
+    "causal": false
+  },
+  {
+    "name": "Product Key Attention",
+    "arxiv_id": "1907.05242",
+    "code": "https://github.com/facebookresearch/XLM",
+    "comment": "search for nearest neighbor keys",
+    "complexity": "{Q}*({K}+{k}^2)*{D}",
+    "causal": true
   },
   {
     "name": "Interlaced Attention",
@@ -110,6 +134,14 @@
     "causal": false
   },
   {
+    "name": "Longformer",
+    "arxiv_id": "2004.05150",
+    "code": "https://github.com/allenai/longformer",
+    "comment": "global + blocked attention",
+    "complexity": "{N}*({k}+{g})*{D}",
+    "causal": true
+  },
+  {
     "name": "ETC",
     "arxiv_id": "2004.08483",
     "comment": "combines global attention (star transformer with multiple global tokens) with local attention",
@@ -125,11 +157,35 @@
     "causal": true
   },
   {
+    "name": "MultiScale Transformer",
+    "arxiv_id": "2005.00581",
+    "code": "IN_PAPER",
+    "comment": "UNet like + retina attetion is something close to BP-Transformer",
+    "complexity": "{N}^2*{D}",
+    "causal": true
+  },
+  {
     "name": "GMAT",
     "arxiv_id": "2006.03274",
     "code": "https://github.com/ag1988/gmat",
     "comment": "adds global tokens",
     "complexity": "{m}*({N}+{m})*{D}",
+    "causal": false
+  },
+  {
+    "name": "Performer",
+    "arxiv_id": "2006.03555",
+    "code": "https://github.com/google-research/google-research/tree/master/performer/fast_self_attention",
+    "comment": "calculate an unbiased stochastic approximation of the attention matrix",
+    "complexity": "{N}*{D}^2*\\log({D})",
+    "causal": true
+  },
+  {
+    "name": "Linformer",
+    "arxiv_id": "2006.04768",
+    "code": "https://github.com/lucidrains/linformer",
+    "comment": "project key and value from n*d to k*d",
+    "complexity": "{N}*{k}*{d}",
     "causal": false
   },
   {
