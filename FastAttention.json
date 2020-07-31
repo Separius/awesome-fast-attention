@@ -1,0 +1,134 @@
+[
+    {
+        "paper_title": "Enhancing the Locality and Breaking the Memory Bottleneck of Transformer on Time Series Forecasting",
+        "arxiv_id": "1907.00235"
+    },
+    {
+        "paper_title": "Fast Transformers with Clustered Attention",
+        "arxiv_id": "2007.04825",
+        "link": "https://github.com/idiap/fast-transformers"
+    },
+    {
+        "paper_title": "Expectation-Maximization Attention Networks for Semantic Segmentation",
+        "arxiv_id": "1907.13426",
+        "link": "https://github.com/XiaLiPKU/EMANet"
+    },
+    {
+        "paper_title": "Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing",
+        "arxiv_id": "2006.03236",
+        "link": "https://github.com/laiguokun/Funnel-Transformer"
+    },
+    {
+        "paper_title": "GMAT: Global Memory Augmentation for Transformers",
+        "arxiv_id": "2006.03274",
+        "link": "https://github.com/ag1988/gmat"
+    },
+    {
+        "paper_title": "Generating Long Sequences with Sparse Transformers",
+        "arxiv_id": "1904.10509",
+        "link": "https://github.com/ptillet/torch-blocksparse"
+    },
+    {
+        "paper_title": "Deep Equilibrium Models",
+        "arxiv_id": "1909.01377",
+        "link": "https://github.com/locuslab/deq"
+    },
+    {
+        "paper_title": "Generating Wikipedia by Summarizing Long Sequences",
+        "arxiv_id": "1801.10198"
+    },
+    {
+        "paper_title": "Jukebox: A Generative Model for Music",
+        "arxiv_id": "2005.00341",
+        "link": "https://github.com/openai/jukebox"
+    },
+    {
+        "paper_title": "Large Memory Layers with Product Keys",
+        "arxiv_id": "1907.05242",
+        "link": "https://github.com/facebookresearch/XLM"
+    },
+    {
+        "paper_title": "Linear Attention Mechanism: An Efficient Attention for Semantic Segmentation",
+        "arxiv_id": "2007.14902",
+        "link": "https://github.com/lironui/Linear-Attention-Mechanism"
+    },
+    {
+        "paper_title": "Linformer: Self-Attention with Linear Complexity",
+        "arxiv_id": "2006.04768",
+        "link": "https://github.com/lucidrains/linformer"
+    },
+    {
+        "paper_title": "Longformer: The Long-Document Transformer",
+        "arxiv_id": "2004.05150",
+        "link": "https://github.com/allenai/longformer"
+    },
+    {
+        "paper_title": "Masked Language Modeling for Proteins via Linearly Scalable Long-Context Transformers",
+        "arxiv_id": "2006.03555"
+    },
+    {
+        "paper_title": "Memory Transformer",
+        "arxiv_id": "2006.11527"
+    },
+    {
+        "paper_title": "Multi-scale Transformer Language Models",
+        "arxiv_id": "2005.00581"
+    },
+    {
+        "paper_title": "Permutohedral Attention Module for Efficient Non-Local Neural Networks",
+        "arxiv_id": "1907.00641",
+        "link": "https://github.com/SamuelJoutard/Permutohedral_attention_module"
+    },
+    {
+        "paper_title": "Processing Megapixel Images with Deep Attention-Sampling Models",
+        "arxiv_id": "1905.03711",
+        "link": "https://github.com/idiap/attention-sampling"
+    },
+    {
+        "paper_title": "Reformer: The Efficient Transformer",
+        "arxiv_id": "2001.04451",
+        "link": "https://github.com/google/trax/tree/master/trax/models/reformer"
+    },
+    {
+        "paper_title": "SANet:Superpixel Attention Network for Skin Lesion Attributes Detection",
+        "arxiv_id": "1910.08995",
+        "link": "https://github.com/bermanmaxim/superpixPool"
+    },
+    {
+        "paper_title": "SCRAM: Spatially Coherent Randomized Attention Maps",
+        "arxiv_id": "1905.10308"
+    },
+    {
+        "paper_title": "Sparse Sinkhorn Attention",
+        "arxiv_id": "2002.11296",
+        "link": "https://github.com/lucidrains/sinkhorn-transformer"
+    },
+    {
+        "paper_title": "Star-Transformer",
+        "arxiv_id": "1902.09113",
+        "link": "https://github.com/fastnlp/fastNLP/blob/master/fastNLP/modules/encoder/star_transformer.py"
+    },
+    {
+        "paper_title": "Synthesizer: Rethinking Self-Attention in Transformer Models",
+        "arxiv_id": "2005.00743"
+    },
+    {
+        "paper_title": "Hand-crafted Attention is All You Need? A Study of Attention on Self-supervised Audio Transformer",
+        "arxiv_id": "2006.05174"
+    },
+    {
+        "paper_title": "Transformer Dissection: A Unified Understanding of Transformer's Attention via the Lens of Kernel",
+        "arxiv_id": "1908.11775",
+        "link": "https://github.com/yaohungt/TransformerDissection"
+    },
+    {
+        "paper_title": "Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context",
+        "arxiv_id": "1901.02860",
+        "link": "https://github.com/kimiyoung/transformer-xl"
+    },
+    {
+        "paper_title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention",
+        "arxiv_id": "2006.16236",
+        "link": "https://github.com/idiap/fast-transformers"
+    }
+]

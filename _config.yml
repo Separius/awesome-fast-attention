@@ -1,0 +1,11 @@
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - CODE_OF_CONDUCT.md
+  - README.md
+  - LICENSE
+
+theme: jekyll-theme-cayman

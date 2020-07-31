@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Criss Cross Attention",
+    "arxiv_id": "1811.11721",
+    "code": "https://github.com/speedinghzl/CCNet",
+    "comment": "each pixel attends to its row and column simultaneously",
+    "complexity": "N*(H+W)*D",
+    "causal": false,
+    "custom": 0
+  },
+  {
+    "name": "Efficient Attention",
+    "arxiv_id": "1812.01243",
+    "code": "https://github.com/cmsflash/efficient-attention",
+    "comment": "softmax(q)(softmax(k)v)",
+    "complexity": "N*D^2",
+    "causal": false,
+    "custom": 0
+  },
+  {
+    "name": "GCNet",
+    "arxiv_id": "1904.11492",
+    "code": "https://github.com/xvjiarui/GCNet",
+    "comment": "squeeze and excitation with an attention pooling (instead of a GAP)",
+    "complexity": "N*D^2",
+    "causal": false,
+    "custom": 0
+  },
+  {
+    "name": "Interlaced Attention",
+    "arxiv_id": "1907.12273",
+    "code": "IN_PAPER",
+    "comment": "combination of a short length and then long range(dilated) attention",
+    "complexity": "N*D^2+N*sqrt(N)*D",
+    "causal": true,
+    "custom": 0.5
+  },
+  {
+    "name": "BP-Transformer",
+    "arxiv_id": "1911.04070",
+    "code": "https://github.com/yzh119/BPT",
+    "comment": "attends to distant tokens coarsely and attends to close tokens in a more fine-grained manner",
+    "complexity": "N*k*log(N/k)*D",
+    "causal": true,
+    "custom": 0.5
+  },
+  {
+    "name": "Compressive Transformer",
+    "arxiv_id": "1911.05507",
+    "code": "https://github.com/lucidrains/compressive-transformer-pytorch",
+    "comment": "compresses distant tokens instead of just stop_grad() ing them, more efficient version of transformerXL",
+    "complexity": "N^2*D",
+    "causal": true,
+    "custom": 0.5
+  },
+  {
+    "name": "Axial Attention",
+    "arxiv_id": "1912.12180",
+    "code": "https://github.com/lucidrains/axial-attention",
+    "comment": "apply attention on each axis separately",
+    "complexity": "N*(H+W)*D",
+    "causal": true,
+    "custom": 0
+  },
+  {
+    "name": "Transformer on a Diet",
+    "arxiv_id": "2002.06170",
+    "code": "https://github.com/cgraywang/transformer-on-diet",
+    "comment": "dilated transformer like wavenet",
+    "complexity": "N*k*D",
+    "causal": true,
+    "custom": 0.5
+  },
+  {
+    "name": "Routing Transformer",
+    "arxiv_id": "2003.05997",
+    "code": "https://github.com/lucidrains/routing-transformer",
+    "comment": "computes attention with same-cluster tokens (computed by online k-means)",
+    "complexity": "N*sqrt(N)*D",
+    "causal": false,
+    "custom": 0
+  },
+  {
+    "name": "SAC",
+    "arxiv_id": "2003.09833",
+    "comment": "learns the q, k connections == dynamically creates a sparse attention matrix",
+    "complexity": "N*k*D",
+    "causal": true,
+    "custom": 1
+  },
+  {
+    "name": "AutoNL",
+    "arxiv_id": "2004.01961",
+    "code": "https://github.com/LiYingwei/AutoNL",
+    "comment": "computes Q(KV) and also down samples q, k, v both in spatial and channel dimensions",
+    "complexity": "(H/h*W/w)*(D/k)^2",
+    "causal": false,
+    "custom": 0
+  },
+  {
+    "name": "ETC",
+    "arxiv_id": "2004.08483",
+    "comment": "combines global attention (star transformer with multiple global tokens) with local attention",
+    "complexity": "(N*g+g^2+N*k)*D",
+    "causal": true,
+    "custom": 0.5
+  },
+  {
+    "name": "FANet",
+    "arxiv_id": "2007.03815",
+    "comment": "l2_norm(q)*(l2_norm(k)*v)",
+    "complexity": "N*D^2",
+    "causal": false,
+    "custom": 0
+  }
+]
