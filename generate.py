@@ -70,7 +70,7 @@ def query_semantic_scholar(query):
 
 def query_arxiv_api(arxiv_id):
     res = arxiv.query(id_list=[arxiv_id])[0]
-    return ' '.join(res['title'].strip().replace('\n', ' ').split()), res['arxiv_url'], res['summary']
+    return ' '.join(res['title'].strip().replace('\n', ' ').split()), 'https://'+res['arxiv_url'], res['summary']
 
 
 def fetch_common_parts(paper):
@@ -92,13 +92,13 @@ def get_custom_emoji(custom):
 
 
 def make_expandable(comment):
-    return f'<details><summary>expand</summary><p>{comment}</p></details>'
+    return f'<details><summary>EXPAND</summary><p>{comment}</p></details>'
 
 
 def generate_fast_attention_table():
     header = [
-        '|Paper(citations)|Code|Complexity|autoregressive?|custom_mask?|main_idea|',
-        '|:---:|:---:|:---:|:---:|:---:|:---:|']
+        '|Paper(citations)|Code|Complexity|Mask|main_idea|',
+        '|:---:|:---:|:---:|:---:|:---:|']
     generated_lines = []
     meta_info = get_and_sort_meta_info('FastAttention_full.json')
     for item in tqdm(meta_info):
@@ -112,8 +112,7 @@ def generate_fast_attention_table():
                      idea=make_expandable(item['comment']), complexity=item['complexity'].replace('*', '\\*'),
                      citation=citation, custom=get_custom_emoji(item['custom']), code=code))
     generated_lines = sorted(generated_lines, key=attrgetter('date', 'citation'))
-    generated_lines = ['|{paper}({citation})|{code}|O({complexity})|{auto}|{custom}|{idea}|'.format(**x)
-                       for x in generated_lines]
+    generated_lines = ['|{paper}({citation})|{code}|O({complexity})|Autoregressive:{auto} CustomMask:{custom}|{idea}|'.format(**x) for x in generated_lines]
     return '\n'.join(header + generated_lines)
 
 
