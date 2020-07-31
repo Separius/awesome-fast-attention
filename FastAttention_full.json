@@ -3,7 +3,7 @@
     "name": "T-DMCA",
     "arxiv_id": "1801.10198",
     "comment": "compresses key and value + blocked attention",
-    "complexity": "b*(N/b)*(N/b/k)*d",
+    "complexity": "b \\cdot \\frac{N}{b} \\cdot \\frac{N}{b \\cdot k} \\cdot d",
     "causal": false
   },
   {

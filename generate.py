@@ -87,13 +87,18 @@ def make_expandable(comment):
     return f'<details><summary>EXPAND</summary><p>{comment}</p></details>'
 
 
+def render_complexity(complexity_latex):
+    # return complexity_latex.replace('*', '\\*')
+    return '![formula](https://render.githubusercontent.com/render/math?math=\\mathcal{O}(' + f'{complexity_latex}))'
+
+
 def generate_fast_attention_table():
     header = [
         '|Paper (citations)|Code|Complexity|AutoRegressive|Main Idea|',
         '|:---:|:---:|:---:|:---:|:---:|']
     generated_lines = []
     meta_info = get_and_sort_meta_info('FastAttention_full.json')
-    for item in tqdm(meta_info):
+    for item in tqdm(meta_info[:1]):
         citation, date, paper, abstract = fetch_common_parts(item)
         if 'code' in item:
             code = fancy_code(item['code'])
@@ -101,7 +106,7 @@ def generate_fast_attention_table():
             code = '-'
         generated_lines.append(
             AttrDict(date=date, name=item['name'], paper=paper, auto=':heavy_check_mark:' if item['causal'] else ':x:',
-                     idea=make_expandable(item['comment']), complexity=item['complexity'].replace('*', '\\*'),
+                     idea=make_expandable(item['comment']), complexity=render_complexity(item['complexity']),
                      citation=citation, code=code))
     generated_lines = sorted(generated_lines, key=attrgetter('date', 'citation'))
     generated_lines = ['|{paper} ({citation})|{code}|O({complexity})|{auto}|{idea}|'.format(**x)
