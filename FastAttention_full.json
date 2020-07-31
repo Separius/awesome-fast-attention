@@ -35,7 +35,7 @@
     "arxiv_id": "1904.11492",
     "code": "https://github.com/xvjiarui/GCNet",
     "comment": "squeeze and excitation with an attention pooling (instead of a GAP)",
-    "complexity": "N*D^2",
+    "complexity": "{N}*{D}^2",
     "causal": false
   },
   {
@@ -43,7 +43,7 @@
     "arxiv_id": "1907.12273",
     "code": "IN_PAPER",
     "comment": "combination of a short length and then long range(dilated) attention",
-    "complexity": "N*D^2+N*sqrt(N)*D",
+    "complexity": "{N}*{D}^2+{N}*\\sqrt{N}*{D}",
     "causal": true
   },
   {
@@ -51,7 +51,7 @@
     "arxiv_id": "1907.13426",
     "code": "https://github.com/XiaLiPKU/EMANet",
     "comment": "applys expectation maximization to cluster keys into k clusters",
-    "complexity": "N*k*D",
+    "complexity": "{N}*{k}*{D}",
     "causal": false
   },
   {
@@ -59,7 +59,7 @@
     "arxiv_id": "1911.04070",
     "code": "https://github.com/yzh119/BPT",
     "comment": "attends to distant tokens coarsely and attends to close tokens in a more fine-grained manner",
-    "complexity": "N*k*log(N/k)*D",
+    "complexity": "{N}*{k}*\\log(\\frac{N}{k})*{D}",
     "causal": true
   },
   {
@@ -67,7 +67,7 @@
     "arxiv_id": "1911.05507",
     "code": "https://github.com/lucidrains/compressive-transformer-pytorch",
     "comment": "compresses distant tokens instead of just stop_grad() ing them, more efficient version of transformerXL",
-    "complexity": "N^2*D",
+    "complexity": "{N}^2*{D}",
     "causal": true
   },
   {
