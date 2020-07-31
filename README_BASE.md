@@ -13,7 +13,7 @@ A curated list of efficient attention modules
 
 ## About This Repo
 
-* enjoy!
+* WIP
 
 ## Efficient Attention
 

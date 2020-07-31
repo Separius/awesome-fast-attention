@@ -70,7 +70,7 @@ def query_semantic_scholar(query):
 
 def query_arxiv_api(arxiv_id):
     res = arxiv.query(id_list=[arxiv_id])[0]
-    return ' '.join(res['title'].strip().replace('\n', ' ').split()), 'https://'+res['arxiv_url'], res['summary']
+    return ' '.join(res['title'].strip().replace('\n', ' ').split()), 'https://' + res['arxiv_url'], res['summary']
 
 
 def fetch_common_parts(paper):
@@ -83,21 +83,13 @@ def fetch_common_parts(paper):
     return citation_part, date_part, paper_part, paper_abstract
 
 
-def get_custom_emoji(custom):
-    if custom == 0:
-        return ':x:'
-    if custom == 1:
-        return ':heavy_check_mark:'
-    return ':wavy_dash:'
-
-
 def make_expandable(comment):
     return f'<details><summary>EXPAND</summary><p>{comment}</p></details>'
 
 
 def generate_fast_attention_table():
     header = [
-        '|Paper(citations)|Code|Complexity|Mask|main_idea|',
+        '|Paper(citations)|Code|Complexity|AutoRegressive|MainIdea|',
         '|:---:|:---:|:---:|:---:|:---:|']
     generated_lines = []
     meta_info = get_and_sort_meta_info('FastAttention_full.json')
@@ -110,9 +102,10 @@ def generate_fast_attention_table():
         generated_lines.append(
             AttrDict(date=date, name=item['name'], paper=paper, auto=':heavy_check_mark:' if item['causal'] else ':x:',
                      idea=make_expandable(item['comment']), complexity=item['complexity'].replace('*', '\\*'),
-                     citation=citation, custom=get_custom_emoji(item['custom']), code=code))
+                     citation=citation, code=code))
     generated_lines = sorted(generated_lines, key=attrgetter('date', 'citation'))
-    generated_lines = ['|{paper}({citation})|{code}|O({complexity})|Autoregressive:{auto} CustomMask:{custom}|{idea}|'.format(**x) for x in generated_lines]
+    generated_lines = ['|{paper}({citation})|{code}|O({complexity})|{auto}|{idea}|'.format(**x)
+                       for x in generated_lines]
     return '\n'.join(header + generated_lines)
 
 
