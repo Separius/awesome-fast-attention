@@ -1,20 +1,251 @@
 [
-    {
-        "paper_title": "Synthesizer: Rethinking Self-Attention in Transformer Models",
-        "arxiv_id": "2005.00743"
-    },
-    {
-        "paper_title": "Hand-crafted Attention is All You Need? A Study of Attention on Self-supervised Audio Transformer",
-        "arxiv_id": "2006.05174"
-    },
-    {
-        "paper_title": "Transformer Dissection: A Unified Understanding of Transformer's Attention via the Lens of Kernel",
-        "arxiv_id": "1908.11775",
-        "link": "https://github.com/yaohungt/TransformerDissection"
-    },
-    {
-        "paper_title": "Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention",
-        "arxiv_id": "2006.16236",
-        "link": "https://github.com/idiap/fast-transformers"
-    }
+  {
+    "name": "T-DMCA",
+    "arxiv_id": "1801.10198",
+    "comment": "compresses key and value + blocked attention",
+    "complexity": "{b}*\\frac{N}{b}*\\frac{N}{{b}*{k}}*{D}",
+    "causal": false
+  },
+  {
+    "name": "Criss Cross Attention",
+    "arxiv_id": "1811.11721",
+    "code": "https://github.com/speedinghzl/CCNet",
+    "comment": "each pixel attends to its row and column simultaneously",
+    "complexity": "{N}*({H}+{W})*{D}",
+    "causal": false
+  },
+  {
+    "name": "Efficient Attention",
+    "arxiv_id": "1812.01243",
+    "code": "https://github.com/cmsflash/efficient-attention",
+    "comment": "Softmax(Q)*(Softmax(K^T)*V)",
+    "complexity": "{N}*{D}^2",
+    "causal": false
+  },
+  {
+    "name": "StartTransformer",
+    "arxiv_id": "1902.09113",
+    "code": "https://github.com/fastnlp/fastNLP/blob/master/fastNLP/modules/encoder/star_transformer.py",
+    "comment": "uses a relay(global) node and attends to/from that node",
+    "complexity": "{N}*{D}",
+    "causal": false
+  },
+  {
+    "name": "Sparse Transformer",
+    "arxiv_id": "1904.10509",
+    "code": "https://github.com/ptillet/torch-blocksparse",
+    "comment": "sparse block based attention",
+    "complexity": "{N}*\\sqrt{N}*{D}",
+    "causal": true
+  },
+  {
+    "name": "GCNet",
+    "arxiv_id": "1904.11492",
+    "code": "https://github.com/xvjiarui/GCNet",
+    "comment": "squeeze and excitation with an attention pooling (instead of a GAP)",
+    "complexity": "{N}*{D}^2",
+    "causal": false
+  },
+  {
+    "name": "SCRAM",
+    "arxiv_id": "1905.10308",
+    "comment": "uses PatchMatch to find close keys",
+    "complexity": "{N}*\\log({N})*{D}",
+    "causal": true
+  },
+  {
+    "name": "Permutohedral Attention",
+    "arxiv_id": "1907.00641",
+    "code": "https://github.com/SamuelJoutard/Permutohedral_attention_module",
+    "comment": "uses permutohedral lattice approximation algorithm to approximate the attention output",
+    "complexity": "{N}*{D}^2",
+    "causal": false
+  },
+  {
+    "name": "Product Key Attention",
+    "arxiv_id": "1907.05242",
+    "code": "https://github.com/facebookresearch/XLM",
+    "comment": "search for nearest neighbor keys",
+    "complexity": "{Q}*({K}+{k}^2)*{D}",
+    "causal": true
+  },
+  {
+    "name": "Interlaced Attention",
+    "arxiv_id": "1907.12273",
+    "code": "IN_PAPER",
+    "comment": "combination of a short length and then long range(dilated) attention",
+    "complexity": "{N}*{D}^2+{N}*\\sqrt{N}*{D}",
+    "causal": true
+  },
+  {
+    "name": "EMA",
+    "arxiv_id": "1907.13426",
+    "code": "https://github.com/XiaLiPKU/EMANet",
+    "comment": "applys expectation maximization to cluster keys into k clusters",
+    "complexity": "{N}*{k}*{D}",
+    "causal": false
+  },
+  {
+    "name": "BP-Transformer",
+    "arxiv_id": "1911.04070",
+    "code": "https://github.com/yzh119/BPT",
+    "comment": "attends to distant tokens coarsely and attends to close tokens in a more fine-grained manner",
+    "complexity": "{N}*{k}*\\log(\\frac{N}{k})*{D}",
+    "causal": true
+  },
+  {
+    "name": "Compressive Transformer",
+    "arxiv_id": "1911.05507",
+    "code": "https://github.com/lucidrains/compressive-transformer-pytorch",
+    "comment": "compresses distant tokens instead of just stop_grad() ing them, more efficient version of transformerXL",
+    "complexity": "{N}^2*{D}",
+    "causal": true
+  },
+  {
+    "name": "Axial Attention",
+    "arxiv_id": "1912.12180",
+    "code": "https://github.com/lucidrains/axial-attention",
+    "comment": "apply attention on each axis separately",
+    "complexity": "{N}*({H}+{W})*{D}",
+    "causal": true
+  },
+  {
+    "name": "Reformer",
+    "arxiv_id": "2001.04451",
+    "code": "https://github.com/google/trax/tree/master/trax/models/reformer",
+    "comment": "uses LSH to find close keys",
+    "complexity": "{N}*\\log({N})*{D}^2",
+    "causal": true
+  },
+  {
+    "name": "Transformer on a Diet",
+    "arxiv_id": "2002.06170",
+    "code": "https://github.com/cgraywang/transformer-on-diet",
+    "comment": "dilated transformer like wavenet",
+    "complexity": "{N}*{k}*{D}",
+    "causal": true
+  },
+  {
+    "name": "Sinkhorn Attention",
+    "arxiv_id": "2002.11296",
+    "code": "https://github.com/lucidrains/sinkhorn-transformer",
+    "comment": "uses a cost matrix to assign limit attention between buckets",
+    "complexity": "\\frac{{N}^2}{n_b}+{n_b}^2",
+    "causal": true
+  },
+  {
+    "name": "Routing Transformer",
+    "arxiv_id": "2003.05997",
+    "code": "https://github.com/lucidrains/routing-transformer",
+    "comment": "computes attention with same-cluster tokens (computed by online k-means)",
+    "complexity": "{N}*\\sqrt{N}*{D}",
+    "causal": false
+  },
+  {
+    "name": "SAC",
+    "arxiv_id": "2003.09833",
+    "comment": "learns the q, k connections == dynamically creates a sparse attention matrix",
+    "complexity": "{N}*{k}*{D}",
+    "causal": true
+  },
+  {
+    "name": "AutoNL",
+    "arxiv_id": "2004.01961",
+    "code": "https://github.com/LiYingwei/AutoNL",
+    "comment": "computes Q(KV) and also down samples q, k, v both in spatial and channel dimensions",
+    "complexity": "(\\frac{H}{h}*\\frac{W}{w})*(\\frac{D}{k})^2",
+    "causal": false
+  },
+  {
+    "name": "Longformer",
+    "arxiv_id": "2004.05150",
+    "code": "https://github.com/allenai/longformer",
+    "comment": "global + blocked attention",
+    "complexity": "{N}*({k}+{g})*{D}",
+    "causal": true
+  },
+  {
+    "name": "ETC",
+    "arxiv_id": "2004.08483",
+    "comment": "combines global attention (star transformer with multiple global tokens) with local attention",
+    "complexity": "({N}*{g}+{g}^2+{N}*{k})*{D}",
+    "causal": true
+  },
+  {
+    "name": "Jukebox",
+    "arxiv_id": "2005.00341",
+    "code": "https://github.com/openai/jukebox",
+    "comment": "better attention patterns from Sparse Transformer",
+    "complexity": "{N}*\\sqrt{N}*{D}",
+    "causal": true
+  },
+  {
+    "name": "MultiScale Transformer",
+    "arxiv_id": "2005.00581",
+    "code": "IN_PAPER",
+    "comment": "UNet like + retina attetion is something close to BP-Transformer",
+    "complexity": "{N}^2*{D}",
+    "causal": true
+  },
+  {
+    "name": "Synthesizer",
+    "arxiv_id": "2005.00743",
+    "comment": "does not compute pairwise interactions",
+    "complexity": "{N}^2*D",
+    "causal": true
+  },
+  {
+    "name": "GMAT",
+    "arxiv_id": "2006.03274",
+    "code": "https://github.com/ag1988/gmat",
+    "comment": "adds global tokens",
+    "complexity": "{m}*({N}+{m})*{D}",
+    "causal": false
+  },
+  {
+    "name": "Performer",
+    "arxiv_id": "2006.03555",
+    "code": "https://github.com/google-research/google-research/tree/master/performer/fast_self_attention",
+    "comment": "calculate an unbiased stochastic approximation of the attention matrix",
+    "complexity": "{N}*{D}^2*\\log({D})",
+    "causal": true
+  },
+  {
+    "name": "Linformer",
+    "arxiv_id": "2006.04768",
+    "code": "https://github.com/lucidrains/linformer",
+    "comment": "project key and value from n*d to k*d",
+    "complexity": "{N}*{k}*{D}",
+    "causal": false
+  },
+  {
+    "name": "Hand-Crafted Attention",
+    "arxiv_id": "2006.05174",
+    "comment": "does not compute pairwise interactions and uses fixed mask patters",
+    "complexity": "{N}^2*D",
+    "causal": true
+  },
+  {
+    "name": "Linear Transformer",
+    "arxiv_id": "2006.16236",
+    "code": "https://github.com/idiap/fast-transformers",
+    "comment": "uses phi(q)(phi(k)v) and also improves the sequential sampling step",
+    "complexity": "{N}*{D}^2",
+    "causal": true
+  },
+  {
+    "name": "FANet",
+    "arxiv_id": "2007.03815",
+    "comment": "l2_norm(q)*(l2_norm(k)*v)",
+    "complexity": "{N}*{D}^2",
+    "causal": false
+  },
+  {
+    "name": "Clustered Attention",
+    "arxiv_id": "2007.04825",
+    "code": "https://github.com/idiap/fast-transformers",
+    "comment": "groups queries together with LSH",
+    "complexity": "{N}*{k}*{D}",
+    "causal": false
+  }
 ]

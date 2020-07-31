@@ -97,7 +97,7 @@ def generate_fast_attention_table():
         '|Paper (citations)|Code|Complexity|AutoRegressive|Main Idea|',
         '|:---:|:---:|:---:|:---:|:---:|']
     generated_lines = []
-    meta_info = get_and_sort_meta_info('FastAttention_full.json')
+    meta_info = get_and_sort_meta_info('FastAttention.json')
     for item in tqdm(meta_info):
         citation, date, paper, abstract = fetch_common_parts(item)
         if 'code' in item:
