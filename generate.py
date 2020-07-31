@@ -89,7 +89,7 @@ def make_expandable(comment):
 
 def generate_fast_attention_table():
     header = [
-        '|Paper(citations)|Code|Complexity|AutoRegressive|MainIdea|',
+        '|Paper (citations)|Code|Complexity|AutoRegressive|Main Idea|',
         '|:---:|:---:|:---:|:---:|:---:|']
     generated_lines = []
     meta_info = get_and_sort_meta_info('FastAttention_full.json')
@@ -104,7 +104,7 @@ def generate_fast_attention_table():
                      idea=make_expandable(item['comment']), complexity=item['complexity'].replace('*', '\\*'),
                      citation=citation, code=code))
     generated_lines = sorted(generated_lines, key=attrgetter('date', 'citation'))
-    generated_lines = ['|{paper}({citation})|{code}|O({complexity})|{auto}|{idea}|'.format(**x)
+    generated_lines = ['|{paper} ({citation})|{code}|O({complexity})|{auto}|{idea}|'.format(**x)
                        for x in generated_lines]
     return '\n'.join(header + generated_lines)
 
