@@ -1,5 +1,13 @@
 [
   {
+    "name": "T-DMCA",
+    "arxiv_id": "1801.10198",
+    "comment": "compresses key and value + blocked attention",
+    "complexity": "b*(N/b)*(N/b/k)*d",
+    "causal": false,
+    "custom": 0
+  },
+  {
     "name": "Criss Cross Attention",
     "arxiv_id": "1811.11721",
     "code": "https://github.com/speedinghzl/CCNet",
@@ -18,6 +26,15 @@
     "custom": 0
   },
   {
+    "name": "Sparse Transformer",
+    "arxiv_id": "1904.10509",
+    "code": "https://github.com/ptillet/torch-blocksparse",
+    "comment": "sparse block based attention",
+    "complexity": "N*sqrt(N)*D",
+    "causal": true,
+    "custom": 0.5
+  },
+  {
     "name": "GCNet",
     "arxiv_id": "1904.11492",
     "code": "https://github.com/xvjiarui/GCNet",
@@ -34,6 +51,15 @@
     "complexity": "N*D^2+N*sqrt(N)*D",
     "causal": true,
     "custom": 0.5
+  },
+  {
+    "name": "EMA",
+    "arxiv_id": "1907.13426",
+    "code": "https://github.com/XiaLiPKU/EMANet",
+    "comment": "applys expectation maximization to cluster keys into k clusters",
+    "complexity": "N*k*D",
+    "causal": false,
+    "custom": 0
   },
   {
     "name": "BP-Transformer",
@@ -106,10 +132,37 @@
     "custom": 0.5
   },
   {
+    "name": "Jukebox",
+    "arxiv_id": "2005.00341",
+    "code": "https://github.com/openai/jukebox",
+    "comment": "better attention patterns from Sparse Transformer",
+    "complexity": "N*sqrt(N)*D",
+    "causal": true,
+    "custom": 0.5
+  },
+  {
+    "name": "GMAT",
+    "arxiv_id": "2006.03274",
+    "code": "https://github.com/ag1988/gmat",
+    "comment": "adds global tokens",
+    "complexity": "m*(N+m)*D",
+    "causal": false,
+    "custom": 0
+  },
+  {
     "name": "FANet",
     "arxiv_id": "2007.03815",
     "comment": "l2_norm(q)*(l2_norm(k)*v)",
     "complexity": "N*D^2",
+    "causal": false,
+    "custom": 0
+  },
+  {
+    "name": "Clustered Attention",
+    "arxiv_id": "2007.04825",
+    "code": "https://github.com/idiap/fast-transformers",
+    "comment": "groups queries together with LSH",
+    "complexity": "N*k*D",
     "causal": false,
     "custom": 0
   }

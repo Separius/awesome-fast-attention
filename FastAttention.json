@@ -1,48 +1,5 @@
 [
     {
-        "paper_title": "Enhancing the Locality and Breaking the Memory Bottleneck of Transformer on Time Series Forecasting",
-        "arxiv_id": "1907.00235"
-    },
-    {
-        "paper_title": "Fast Transformers with Clustered Attention",
-        "arxiv_id": "2007.04825",
-        "link": "https://github.com/idiap/fast-transformers"
-    },
-    {
-        "paper_title": "Expectation-Maximization Attention Networks for Semantic Segmentation",
-        "arxiv_id": "1907.13426",
-        "link": "https://github.com/XiaLiPKU/EMANet"
-    },
-    {
-        "paper_title": "Funnel-Transformer: Filtering out Sequential Redundancy for Efficient Language Processing",
-        "arxiv_id": "2006.03236",
-        "link": "https://github.com/laiguokun/Funnel-Transformer"
-    },
-    {
-        "paper_title": "GMAT: Global Memory Augmentation for Transformers",
-        "arxiv_id": "2006.03274",
-        "link": "https://github.com/ag1988/gmat"
-    },
-    {
-        "paper_title": "Generating Long Sequences with Sparse Transformers",
-        "arxiv_id": "1904.10509",
-        "link": "https://github.com/ptillet/torch-blocksparse"
-    },
-    {
-        "paper_title": "Deep Equilibrium Models",
-        "arxiv_id": "1909.01377",
-        "link": "https://github.com/locuslab/deq"
-    },
-    {
-        "paper_title": "Generating Wikipedia by Summarizing Long Sequences",
-        "arxiv_id": "1801.10198"
-    },
-    {
-        "paper_title": "Jukebox: A Generative Model for Music",
-        "arxiv_id": "2005.00341",
-        "link": "https://github.com/openai/jukebox"
-    },
-    {
         "paper_title": "Large Memory Layers with Product Keys",
         "arxiv_id": "1907.05242",
         "link": "https://github.com/facebookresearch/XLM"
