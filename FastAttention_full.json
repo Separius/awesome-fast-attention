@@ -3,7 +3,7 @@
     "name": "T-DMCA",
     "arxiv_id": "1801.10198",
     "comment": "compresses key and value + blocked attention",
-    "complexity": "b \\cdot \\frac{N}{b} \\cdot \\frac{N}{b \\cdot k} \\cdot d",
+    "complexity": "{b}*\\frac{N}{b}*\\frac{N}{{b}*{k}}*{D}",
     "causal": false
   },
   {
@@ -11,7 +11,7 @@
     "arxiv_id": "1811.11721",
     "code": "https://github.com/speedinghzl/CCNet",
     "comment": "each pixel attends to its row and column simultaneously",
-    "complexity": "N*(H+W)*D",
+    "complexity": "{N}*({H}+{W})*{D}",
     "causal": false
   },
   {
