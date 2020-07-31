@@ -71,7 +71,7 @@ def query_semantic_scholar(query):
 
 def query_arxiv_api(arxiv_id):
     res = arxiv.query(id_list=[arxiv_id])[0]
-    return ' '.join(res['title'].strip().replace('\n', ' ').split()), 'https://' + res['arxiv_url'], res['summary']
+    return ' '.join(res['title'].strip().replace('\n', ' ').split()), res['arxiv_url'].replace('http:', 'https:'), res['summary']
 
 
 def fetch_common_parts(paper):

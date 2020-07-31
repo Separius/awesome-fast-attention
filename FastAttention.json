@@ -129,7 +129,7 @@
     "name": "Sinkhorn Attention",
     "arxiv_id": "2002.11296",
     "code": "https://github.com/lucidrains/sinkhorn-transformer",
-    "comment": "uses a cost matrix to assign limit attention between buckets",
+    "comment": "uses a cost matrix to limit attention between buckets",
     "complexity": "\\frac{{N}^2}{n_b}+{n_b}^2",
     "causal": true
   },
