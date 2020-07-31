@@ -191,7 +191,7 @@
     "name": "Synthesizer",
     "arxiv_id": "2005.00743",
     "comment": "does not compute pairwise interactions",
-    "complexity": "{N}^2*D",
+    "complexity": "{N}^2*{D}",
     "causal": true
   },
   {
@@ -222,7 +222,7 @@
     "name": "Hand-Crafted Attention",
     "arxiv_id": "2006.05174",
     "comment": "does not compute pairwise interactions and uses fixed mask patters",
-    "complexity": "{N}^2*D",
+    "complexity": "{N}^2*{D}",
     "causal": true
   },
   {

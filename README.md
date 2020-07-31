@@ -1,16 +1,11 @@
 # awesome-fast-attention [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-A curated list of efficient attention modules
+A curated list of efficient attention modules (last update: Fri, 31 Jul 2020 14:52:27 +0000)
 
 ## Table of Contents
 
-* **[About This Repo](#about-this-repo)**
 * **[Efficient Attention](#efficient-attention)**
 * **[Articles](#articles)**
-
-## About This Repo
-
-* WIP
 
 ## Efficient Attention
 
@@ -39,11 +34,11 @@ A curated list of efficient attention modules
 |[Neural Architecture Search for Lightweight Non-Local Networks](https://http://arxiv.org/abs/2004.01961v1 ) (2)|[AutoNL](https://github.com/LiYingwei/AutoNL ) ![](https://img.shields.io/github/stars/LiYingwei/AutoNL.svg?style=social )|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}((\frac{H}{h}\cdot\frac{W}{w})\cdot(\frac{D}{k})^2))|:x:|<details><summary>EXPAND</summary><p>computes Q(KV) and also down samples q, k, v both in spatial and channel dimensions</p></details>|
 |[ETC: Encoding Long and Structured Data in Transformers](https://http://arxiv.org/abs/2004.08483v2 ) (2)|-|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}(({N}\cdot{g}%2b{g}^2%2b{N}\cdot{k})\cdot{D}))|:heavy_check_mark:|<details><summary>EXPAND</summary><p>combines global attention (star transformer with multiple global tokens) with local attention</p></details>|
 |[Multi-scale Transformer Language Models](https://http://arxiv.org/abs/2005.00581v1 ) (1)|IN_PAPER|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}^2\cdot{D}))|:heavy_check_mark:|<details><summary>EXPAND</summary><p>UNet like + retina attetion is something close to BP-Transformer</p></details>|
-|[Synthesizer: Rethinking Self-Attention in Transformer Models](https://http://arxiv.org/abs/2005.00743v1 ) (5)|-|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}^2\cdotD))|:heavy_check_mark:|<details><summary>EXPAND</summary><p>does not compute pairwise interactions</p></details>|
+|[Synthesizer: Rethinking Self-Attention in Transformer Models](https://http://arxiv.org/abs/2005.00743v1 ) (5)|-|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}^2\cdot{D}))|:heavy_check_mark:|<details><summary>EXPAND</summary><p>does not compute pairwise interactions</p></details>|
 |[Jukebox: A Generative Model for Music](https://http://arxiv.org/abs/2005.00341v1 ) (9)|[jukebox](https://github.com/openai/jukebox ) ![](https://img.shields.io/github/stars/openai/jukebox.svg?style=social )|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}\cdot\sqrt{N}\cdot{D}))|:heavy_check_mark:|<details><summary>EXPAND</summary><p>better attention patterns from Sparse Transformer</p></details>|
 |[GMAT: Global Memory Augmentation for Transformers](https://http://arxiv.org/abs/2006.03274v1 ) (0)|[gmat](https://github.com/ag1988/gmat ) ![](https://img.shields.io/github/stars/ag1988/gmat.svg?style=social )|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({m}\cdot({N}%2b{m})\cdot{D}))|:x:|<details><summary>EXPAND</summary><p>adds global tokens</p></details>|
 |[Masked Language Modeling for Proteins via Linearly Scalable Long-Context Transformers](https://http://arxiv.org/abs/2006.03555v1 ) (0)|[google-research](https://github.com/google-research/google-research/tree/master/performer/fast_self_attention ) ![](https://img.shields.io/github/stars/google-research/google-research.svg?style=social )|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}\cdot{D}^2\cdot\log({D})))|:heavy_check_mark:|<details><summary>EXPAND</summary><p>calculate an unbiased stochastic approximation of the attention matrix</p></details>|
-|[Hand-crafted Attention is All You Need? A Study of Attention on Self-supervised Audio Transformer](https://http://arxiv.org/abs/2006.05174v1 ) (0)|-|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}^2\cdotD))|:heavy_check_mark:|<details><summary>EXPAND</summary><p>does not compute pairwise interactions and uses fixed mask patters</p></details>|
+|[Hand-crafted Attention is All You Need? A Study of Attention on Self-supervised Audio Transformer](https://http://arxiv.org/abs/2006.05174v1 ) (0)|-|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}^2\cdot{D}))|:heavy_check_mark:|<details><summary>EXPAND</summary><p>does not compute pairwise interactions and uses fixed mask patters</p></details>|
 |[Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention](https://http://arxiv.org/abs/2006.16236v2 ) (1)|[fast-transformers](https://github.com/idiap/fast-transformers ) ![](https://img.shields.io/github/stars/idiap/fast-transformers.svg?style=social )|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}\cdot{D}^2))|:heavy_check_mark:|<details><summary>EXPAND</summary><p>uses phi(q)(phi(k)v) and also improves the sequential sampling step</p></details>|
 |[Linformer: Self-Attention with Linear Complexity](https://http://arxiv.org/abs/2006.04768v3 ) (3)|[linformer](https://github.com/lucidrains/linformer ) ![](https://img.shields.io/github/stars/lucidrains/linformer.svg?style=social )|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}\cdot{k}\cdot{D}))|:x:|<details><summary>EXPAND</summary><p>project key and value from n*d to k*d</p></details>|
 |[Real-time Semantic Segmentation with Fast Attention](https://http://arxiv.org/abs/2007.03815v2 ) (0)|-|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}\cdot{D}^2))|:x:|<details><summary>EXPAND</summary><p>l2_norm(q)*(l2_norm(k)*v)</p></details>|

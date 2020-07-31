@@ -2,6 +2,7 @@ import re
 import json
 import urllib.parse
 import urllib.request
+from time import gmtime, strftime
 from operator import attrgetter, itemgetter
 
 import arxiv
@@ -117,6 +118,7 @@ def generate_fast_attention_table():
 if __name__ == '__main__':
     with open('README_BASE.md', 'r') as f:
         readme = f.read()
+    readme = readme.replace('{{{generation-date}}}', strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime()))
     readme = readme.replace('{{{fast-attention-table}}}', generate_fast_attention_table())
     with open('README.md', 'w') as f:
         f.write(readme)
