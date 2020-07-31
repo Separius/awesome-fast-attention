@@ -93,8 +93,8 @@ def get_custom_emoji(custom):
 
 def generate_fast_attention_table():
     header = [
-        '|date|name|paper(citation_count)|code(github_stars)|main_idea|complexity(Big_O)|autoregressive?|custom_mask?|',
-        '|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|']
+        '|paper(citation_count)|code(github_stars)|complexity(Big_O)|autoregressive?|custom_mask?|main_idea|',
+        '|:---:|:---:|:---:|:---:|:---:|:---:|']
     generated_lines = []
     meta_info = get_and_sort_meta_info('FastAttention_full.json')
     for item in tqdm(meta_info):
@@ -108,9 +108,8 @@ def generate_fast_attention_table():
                      code=code, idea=item['comment'], complexity=item['complexity'].replace('*', '\\*'),
                      citation=citation, custom=get_custom_emoji(item['custom'])))
     generated_lines = sorted(generated_lines, key=attrgetter('date', 'citation'))
-    generated_lines = ['|{date}|{name}|{paper}({citation})|{code}|{idea}|O({complexity})|{auto}|{custom}|'.format(**x)
-                       for x in
-                       generated_lines]
+    generated_lines = ['|{paper}({citation})|{code}|O({complexity})|{auto}|{custom}|{idea}|'.format(**x)
+                       for x in generated_lines]
     return '\n'.join(header + generated_lines)
 
 
