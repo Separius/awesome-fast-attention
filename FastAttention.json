@@ -2,6 +2,7 @@
   {
     "name": "T-DMCA",
     "arxiv_id": "1801.10198",
+    "code": "https://github.com/lucidrains/memory-compressed-attention",
     "comment": "compresses key and value + blocked attention",
     "complexity": "{b}*\\frac{N}{b}*\\frac{N}{{b}*{k}}*{D}",
     "causal": false
@@ -213,7 +214,7 @@
   {
     "name": "Linformer",
     "arxiv_id": "2006.04768",
-    "code": "https://github.com/lucidrains/linformer",
+    "code": "https://github.com/tatp22/linformer-pytorch",
     "comment": "project key and value from n*d to k*d",
     "complexity": "{N}*{k}*{D}",
     "causal": false
