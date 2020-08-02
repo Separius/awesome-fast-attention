@@ -8,6 +8,14 @@
     "causal": false
   },
   {
+    "name": "CBAM",
+    "arxiv_id": "1807.06521",
+    "code": "https://github.com/Jongchan/attention-module",
+    "comment": "combines the SE attention with a per pixel(local) weight",
+    "complexity": "({N}*{D}+\\frac{{D}^2}{r})+({N}*{D}*{k}^2)",
+    "causal": false
+  },
+  {
     "name": "Criss Cross Attention",
     "arxiv_id": "1811.11721",
     "code": "https://github.com/speedinghzl/CCNet",
@@ -170,7 +178,7 @@
     "arxiv_id": "2004.08483",
     "comment": "combines global attention (star transformer with multiple global tokens) with local attention",
     "complexity": "({N}*{g}+{g}^2+{N}*{k})*{D}",
-    "causal": true
+    "causal": false
   },
   {
     "name": "Jukebox",
@@ -247,6 +255,13 @@
     "code": "https://github.com/idiap/fast-transformers",
     "comment": "groups queries together with LSH",
     "complexity": "{N}*{k}*{D}",
+    "causal": false
+  },
+  {
+    "name": "BigBird",
+    "arxiv_id": "2007.14062",
+    "comment": "ETC with random connections",
+    "complexity": "({g}^2+{N}*({k}+{g}+{r}))*{D}",
     "causal": false
   }
 ]
