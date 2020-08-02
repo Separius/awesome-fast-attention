@@ -148,7 +148,7 @@
     "code": "https://github.com/lucidrains/routing-transformer",
     "comment": "computes attention with same-cluster tokens (computed by online k-means)",
     "complexity": "{N}*\\sqrt{N}*{D}",
-    "causal": false
+    "causal": true
   },
   {
     "name": "SAC",
