@@ -263,5 +263,12 @@
     "comment": "ETC with random connections",
     "complexity": "({g}^2+{N}*({k}+{g}+{r}))*{D}",
     "causal": false
+  },
+  {
+    "name": "TGM+TRM",
+    "arxiv_id": "2008.00490",
+    "comment": "decompose the full attention tensor into rank one tensors (CP decomposition)",
+    "complexity": "({D}*{H}*{W}+{D}^2+{H}^2+{W}^2)*{r}",
+    "causal": false
   }
 ]

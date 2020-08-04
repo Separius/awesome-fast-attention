@@ -1,6 +1,6 @@
 # awesome-fast-attention [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-A curated list of efficient attention modules (last update: Sun, 02 Aug 2020 13:39:34 +0000)
+A curated list of efficient attention modules (last update: Tue, 04 Aug 2020 05:36:27 +0000)
 
 ## Table of Contents
 
@@ -45,6 +45,7 @@ A curated list of efficient attention modules (last update: Sun, 02 Aug 2020 13:
 |[Real-time Semantic Segmentation with Fast Attention](https://arxiv.org/abs/2007.03815v2 ) (0)|-|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}\cdot{D}^2))|:x:|<details><summary>EXPAND</summary><p>l2_norm(q)*(l2_norm(k)*v)</p></details>|
 |[Fast Transformers with Clustered Attention](https://arxiv.org/abs/2007.04825v1 ) (0)|[fast-transformers](https://github.com/idiap/fast-transformers ) ![](https://img.shields.io/github/stars/idiap/fast-transformers.svg?style=social )|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}({N}\cdot{k}\cdot{D}))|:x:|<details><summary>EXPAND</summary><p>groups queries together with LSH</p></details>|
 |[Big Bird: Transformers for Longer Sequences](https://arxiv.org/abs/2007.14062v1 ) (0)|-|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}(({g}^2%2b{N}\cdot({k}%2b{g}%2b{r}))\cdot{D}))|:x:|<details><summary>EXPAND</summary><p>ETC with random connections</p></details>|
+|[Tensor Low-Rank Reconstruction for Semantic Segmentation](https://arxiv.org/abs/2008.00490v1 ) (N/A)|-|![formula](https://render.githubusercontent.com/render/math?math=\mathcal{O}(({D}\cdot{H}\cdot{W}%2b{D}^2%2b{H}^2%2b{W}^2)\cdot{r}))|:x:|<details><summary>EXPAND</summary><p>decompose the full attention tensor into rank one tensors (CP decomposition)</p></details>|
 
 ## Articles
 
