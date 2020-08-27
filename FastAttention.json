@@ -258,6 +258,14 @@
     "causal": false
   },
   {
+    "name": "Kronecker Attention",
+    "arxiv_id": "2007.08442",
+    "code": "https://github.com/lucidrains/kronecker-attention-pytorch",
+    "comment": "uses horizontal and lateral average matrices",
+    "complexity": "({H}+{W})^2*{D}",
+    "causal": false
+  },
+  {
     "name": "BigBird",
     "arxiv_id": "2007.14062",
     "comment": "ETC with random connections",
