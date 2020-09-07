@@ -278,5 +278,13 @@
     "comment": "decompose the full attention tensor into rank one tensors (CP decomposition)",
     "complexity": "({D}*{H}*{W}+{D}^2+{H}^2+{W}^2)*{r}",
     "causal": false
+  },
+  {
+    "name": "FracTAL",
+    "arxiv_id": "2009.02062",
+    "code": "IN_PAPER",
+    "comment": "uses the fractal tanimoto similarity to compare queries with keys inside the attention module",
+    "complexity": "{H}*{W}*{D}",
+    "causal": false
   }
 ]
