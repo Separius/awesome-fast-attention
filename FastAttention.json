@@ -42,7 +42,7 @@
   {
     "name": "Sparse Transformer",
     "arxiv_id": "1904.10509",
-    "code": "https://github.com/ptillet/torch-blocksparse",
+    "code": "https://github.com/microsoft/DeepSpeed/blob/master/deepspeed/ops/sparse_attention/sparse_self_attention.py",
     "comment": "sparse block based attention",
     "complexity": "{N}*\\sqrt{N}*{D}",
     "causal": true
