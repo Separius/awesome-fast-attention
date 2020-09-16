@@ -5,7 +5,7 @@ A curated list of efficient attention modules (last update: {{{generation-date}}
 ## Table of Contents
 
 * **[Efficient Attention](#efficient-attention)**
-* **[Articles](#articles)**
+* **[Articles/Surveys](#articlessurveys)**
 
 ## Efficient Attention
 
