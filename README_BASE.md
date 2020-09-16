@@ -11,7 +11,8 @@ A curated list of efficient attention modules (last update: {{{generation-date}}
 
 {{{fast-attention-table}}}
 
-## Articles
+## Articles/Surveys
 
 * [A Survey of Long-Term Context in Transformers](https://www.pragmatic.ml/a-survey-of-methods-for-incorporating-long-term-context/)
+* [Efficient Transformers: A Survey](https://arxiv.org/abs/2009.06732)
 

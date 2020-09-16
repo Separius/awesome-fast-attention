@@ -5,7 +5,7 @@
     "code": "https://github.com/lucidrains/memory-compressed-attention",
     "comment": "compresses key and value + blocked attention",
     "complexity": "{b}*\\frac{N}{b}*\\frac{N}{{b}*{k}}*{D}",
-    "causal": false
+    "causal": true
   },
   {
     "name": "CBAM",
@@ -13,6 +13,14 @@
     "code": "https://github.com/Jongchan/attention-module",
     "comment": "combines the SE attention with a per pixel(local) weight",
     "complexity": "({N}*{D}+\\frac{{D}^2}{r})+({N}*{D}*{k}^2)",
+    "causal": false
+  },
+  {
+    "name": "Set Transformer",
+    "arxiv_id": "1810.00825",
+    "code": "https://github.com/juho-lee/set_transformer",
+    "comment": "uses K relay nodes",
+    "complexity": "{N}*{K}",
     "causal": false
   },
   {
@@ -32,7 +40,7 @@
     "causal": false
   },
   {
-    "name": "StartTransformer",
+    "name": "StarTransformer",
     "arxiv_id": "1902.09113",
     "code": "https://github.com/fastnlp/fastNLP/blob/master/fastNLP/modules/encoder/star_transformer.py",
     "comment": "uses a relay(global) node and attends to/from that node",
@@ -199,6 +207,7 @@
   {
     "name": "Synthesizer",
     "arxiv_id": "2005.00743",
+    "code": "https://github.com/leaderj1001/Synthesizer-Rethinking-Self-Attention-Transformer-Models",
     "comment": "does not compute pairwise interactions",
     "complexity": "{N}^2*{D}",
     "causal": true
@@ -268,6 +277,7 @@
   {
     "name": "BigBird",
     "arxiv_id": "2007.14062",
+    "code": "https://github.com/microsoft/DeepSpeed/blob/master/deepspeed/ops/sparse_attention/sparse_self_attention.py",
     "comment": "ETC with random connections",
     "complexity": "({g}^2+{N}*({k}+{g}+{r}))*{D}",
     "causal": false
