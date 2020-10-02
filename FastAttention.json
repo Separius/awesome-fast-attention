@@ -296,5 +296,13 @@
     "comment": "uses the fractal tanimoto similarity to compare queries with keys inside the attention module",
     "complexity": "{H}*{W}*{D}",
     "causal": false
+  },
+  {
+    "name": "Performer",
+    "arxiv_id": "2009.14794",
+    "code": "https://github.com/google-research/google-research/tree/master/performer",
+    "comment": "unbiased approximation of the attention matrix",
+    "complexity": "{N}*{r}*{D}",
+    "causal": true
   }
 ]
