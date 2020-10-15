@@ -3,3 +3,5 @@
 [LONG RANGE ARENA: A BENCHMARK FOR EFFICIENT TRANSFORMERS](https://openreview.net/pdf?id=qVyeW-grC2k)
 
 [LAMBDA NETWORKS: MODELING LONG-RANGE INTERACTIONS WITHOUT ATTENTION](https://openreview.net/pdf?id=xTJEN-ggl1b)
+
+[Memformer: The Memory-Augmented Transformer](https://arxiv.org/abs/2010.06891)
