@@ -9,3 +9,5 @@
 [SMYRF: Efficient Attention using Asymmetric Clustering](https://arxiv.org/abs/2010.05315)
 
 [Is Attention better than matrix decomposition](https://openreview.net/pdf?id=1FvkSpWosOl)
+
+[Sub-Linear Memory: How to Make Performers SLiM](https://arxiv.org/abs/2012.11346)
