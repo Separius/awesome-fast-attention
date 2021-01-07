@@ -304,5 +304,13 @@
     "comment": "unbiased approximation of the attention matrix",
     "complexity": "{N}*{r}*{D}",
     "causal": true
+  },
+  {
+    "name": "Informer",
+    "arxiv_id": "2012.07436",
+    "code": "https://github.com/zhouhaoyi/Informer2020",
+    "comment": "sparse attention + funnel like encoder",
+    "complexity": "{N}*\\log({N})",
+    "causal": true
   }
 ]
