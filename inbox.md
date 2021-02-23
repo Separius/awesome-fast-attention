@@ -13,3 +13,4 @@
 [Sub-Linear Memory: How to Make Performers SLiM](https://arxiv.org/abs/2012.11346)
 
 [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](https://arxiv.org/abs/2102.03902)
+[Linear Transformers Are Secretly Fast Weight Memory Systems](https://arxiv.org/abs/2102.11174)
