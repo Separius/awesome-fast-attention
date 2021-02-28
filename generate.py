@@ -95,7 +95,7 @@ def render_complexity(complexity_latex):
 
 def generate_fast_attention_table():
     header = [
-        '|Paper (citations)|Implementation|Complexity|AutoRegressive|Main Idea|',
+        '|Paper (citations)|Implementation|Computational Complexity|AutoRegressive|Main Idea|',
         '|:---:|:---:|:---:|:---:|:---:|']
     generated_lines = []
     meta_info = get_and_sort_meta_info('FastAttention.json')

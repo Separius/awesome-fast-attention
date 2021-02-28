@@ -20,7 +20,7 @@
     "arxiv_id": "1810.00825",
     "code": "https://github.com/juho-lee/set_transformer",
     "comment": "uses K relay nodes",
-    "complexity": "{N}*{K}",
+    "complexity": "{N}*{K}*{D}",
     "causal": false
   },
   {
@@ -221,9 +221,9 @@
     "causal": false
   },
   {
-    "name": "Performer",
+    "name": "Performer(FAVOR)",
     "arxiv_id": "2006.03555",
-    "code": "https://github.com/google-research/google-research/tree/master/performer/fast_self_attention",
+    "code": "https://github.com/google-research/google-research/tree/master/performer/fast_attention",
     "comment": "calculate an unbiased stochastic approximation of the attention matrix",
     "complexity": "{N}*{D}^2*\\log({D})",
     "causal": true
@@ -298,11 +298,27 @@
     "causal": false
   },
   {
-    "name": "Performer",
+    "name": "Performer(FAVOR+)",
     "arxiv_id": "2009.14794",
     "code": "https://github.com/google-research/google-research/tree/master/performer",
-    "comment": "unbiased approximation of the attention matrix",
-    "complexity": "{N}*{r}*{D}",
+    "comment": "unbiased approximation of the attention matrix with softmax kernel",
+    "complexity": "{N}*{m}*{D}",
+    "causal": true
+  },
+  {
+    "name": "SMYRF",
+    "arxiv_id": "2010.05315",
+    "code": "https://github.com/giannisdaras/smyrf",
+    "comment": "LSH with balanced clusters",
+    "complexity": "{N}*\\log({N})*{D}",
+    "causal": false
+  },
+  {
+    "name": "Memformer",
+    "arxiv_id": "2010.06891",
+    "code": "https://github.com/lucidrains/memformer",
+    "comment": "attend to memory slots + Memory-Replay BackPropagation",
+    "complexity": "{N}*{D}",
     "causal": true
   },
   {
@@ -310,7 +326,39 @@
     "arxiv_id": "2012.07436",
     "code": "https://github.com/zhouhaoyi/Informer2020",
     "comment": "sparse attention + funnel like encoder",
-    "complexity": "{N}*\\log({N})",
+    "complexity": "{N}*\\log({N})*{D}",
+    "causal": true
+  },
+  {
+    "name": "SLiM",
+    "arxiv_id": "2012.11346",
+    "code": "https://github.com/google-research/google-research/tree/master/performer/models/slim_performer",
+    "comment": "Performer but with sublinear Memory usage",
+    "complexity": "{N}*{m}*{D}",
+    "causal": true
+  },
+  {
+    "name": "Nystromformer",
+    "arxiv_id": "2102.03902",
+    "code": "https://github.com/mlpen/Nystromformer",
+    "comment": "uses Nystrom method to approximate the attention matrix",
+    "complexity": "{N}*{D}",
+    "causal": false
+  },
+  {
+    "name": "LambdaNetworks",
+    "arxiv_id": "2102.08602",
+    "code": "https://github.com/lucidrains/lambda-networks",
+    "comment": "generates a linear layer based on context + decouple pos/context",
+    "complexity": "{N}^2*{k}*\\frac{v}{h}",
+    "causal": true
+  },
+  {
+    "name": "SeclyretFastWeight",
+    "arxiv_id": "2102.11174",
+    "code": "https://github.com/ischlag/fast-weight-transformers",
+    "comment": "show that linear transformers are basically fast weight networks + propose a new kernel function to linearise attention, balancing simplicity and effectiveness",
+    "complexity": "{N}*{m}*{D}",
     "causal": true
   }
 ]
