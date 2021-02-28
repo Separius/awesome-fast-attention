@@ -1,5 +1,5 @@
 language: ruby
-install: gem install chef-utils -v 16.6.14 mdl awesome_bot
+install: gem install 'chef-utils:16.6.14' 'mdl' 'awesome_bot'
 script:
   - travis_wait 120 awesome_bot --allow-dupe --skip-save-results --allow-redirect --base_url https://github.com/Separius/awesome-fast-attention/blob/master/ README_BASE.md
   - travis_wait 120 awesome_bot --allow-dupe --skip-save-results --allow-redirect --base_url https://github.com/Separius/awesome-fast-attention/blob/master/ FastAttention.json
