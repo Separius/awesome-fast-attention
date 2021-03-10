@@ -135,6 +135,14 @@
     "causal": true
   },
   {
+    "name": "TaLK",
+    "arxiv_id": "2002.03184",
+    "code": "https://github.com/lioutasb/TaLKConvolutions",
+    "comment": "calculate mean over a dynamic subsequence around each token with the help of summed-area table",
+    "complexity": "{N}*{D}",
+    "causal": true
+  },
+  {
     "name": "Transformer on a Diet",
     "arxiv_id": "2002.06170",
     "code": "https://github.com/cgraywang/transformer-on-diet",
@@ -354,11 +362,18 @@
     "causal": true
   },
   {
-    "name": "SeclyretFastWeight",
+    "name": "SecretlyFastWeight",
     "arxiv_id": "2102.11174",
     "code": "https://github.com/ischlag/fast-weight-transformers",
     "comment": "show that linear transformers are basically fast weight networks + propose a new kernel function to linearise attention, balancing simplicity and effectiveness",
     "complexity": "{N}*{m}*{D}",
+    "causal": true
+  },
+  {
+    "name": "RFA",
+    "arxiv_id": "2103.02143",
+    "comment": "kernel approximation and also transformers are rnn",
+    "complexity": "{N}*{D}",
     "causal": true
   }
 ]
